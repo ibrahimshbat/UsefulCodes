@@ -21,8 +21,8 @@ public class NoOptimal {
 		SortedSet<Double> pE1 = new TreeSet<Double>();
 		ProtocolStats st = new ProtocolStats();
 		double delta = 0.001;
-		int N=5,WR=10;
-		double 	dlamda=0.0, E2=0.25,p=0.0,pp=0.0;
+		int N=3,WR=10;
+		double 	dlamda=0.0, E2=0.5,p=0.0,pp=0.0;
 		while ((str = in.readLine()) != null){
 			dlamda = Double.parseDouble(str);
 			for (double i = 1; i >= 0.05; i-=0.05) {
@@ -32,13 +32,13 @@ public class NoOptimal {
 					pE1.add(i);
 				}
 			}
-			if (pE1.first() < E2){
+			if (pE1.first() <= E2){
 				p=E2-delta;
 				System.out.println("WR=+"+WR+"/P1*="+pE1.first()+"/P1*<=E2/ ---> p="+p);
 			}
 			else{
 				System.out.println("pE1.first()="+pE1.first());
-				pp=findp(0,4,dlamda,E2,pE1.first(),st);
+				pp=findp(0,8,dlamda,E2,pE1.first(),st);
 				if(pp!=0.0)
 					System.out.println("WR=+"+WR+"/P1*="+pE1.first()+"/P1*<=E2/ ---> p="+pp);
 				else
