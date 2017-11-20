@@ -19,7 +19,7 @@ public class NoOptimal {
 
 		DecimalFormat roundValue = new DecimalFormat("#.000");
 		SortedSet<Double> pE1 = new TreeSet<Double>();
-		ProtocolStats st = new ProtocolStats();
+		ProtocolStats1 st = new ProtocolStats1();
 		double delta = 0.001;
 		int N=3,WR=10;
 		double 	dlamda=0.0, E2=0.5,p=0.0,pp=0.0;
@@ -48,7 +48,7 @@ public class NoOptimal {
 		}
 	}
 
-	public static double findp(int c, int n, double c1, double c2, double P1, ProtocolStats st){
+	public static double findp(int c, int n, double c1, double c2, double P1, ProtocolStats1 st){
 		final double ABS = 0.001;
 		DecimalFormat roundValue = new DecimalFormat("#.000");
 		double newp=c2, newW=0.0, p=0.000, upto=P1-0.05;

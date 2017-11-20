@@ -20,7 +20,7 @@ public class PVSW {
 		TreeMap<Double, Double> pW = new TreeMap<Double, Double>();
 		DecimalFormat roundValue = new DecimalFormat("#.000");
 		SortedSet<Double> pE1 = new TreeSet<Double>();
-		ProtocolStats st = new ProtocolStats();
+		ProtocolStats1 st = new ProtocolStats1();
 		int N=9, C=3;
 		for (double i = 1; i >= 0.001; i-=0.01) {
 			//System.out.println(i);
