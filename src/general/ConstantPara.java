@@ -1,4 +1,4 @@
-package General;
+package general;
 
 public class ConstantPara {
 	private final static int THETA_N3_WR10_T0     = 1810;

@@ -1,4 +1,4 @@
-package GC;
+package garbageCollection;
     import java.util.Date;
      
     public class RuntimeDemo
