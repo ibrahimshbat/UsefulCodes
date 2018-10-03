@@ -1,5 +1,7 @@
 package subList;
-
+/*
+ * Class to Check how to obtain sub list from List
+ */
 import java.util.ArrayList;
 import java.util.List;
 
