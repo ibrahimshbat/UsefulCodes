@@ -14,7 +14,9 @@ public class PrintStrings {
 		System.out.println("sdad \njgjsdgjasdgjag");
 		outFile.print("A,B,c,d \n");
 		outFile.print("V,K,c,d \n");
-		outFile.print("G,M,c,d \n");
+		outFile.print("E,M,c,d \n");
+		outFile.print("K,M,c,d \n");
+		outFile.print("M,M,c,d \n");
 		outFile.flush();
 
 
