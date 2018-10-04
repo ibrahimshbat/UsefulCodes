@@ -17,6 +17,8 @@ public class TestRandom {
 	    	
 			randomValue=random.nextDouble();
 			System.out.println(randomValue);
+			randomValue=random.nextDouble();
+			System.out.println(randomValue);
 
 
 	}

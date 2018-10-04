@@ -1,4 +1,4 @@
-package Timer;
+package timer;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;

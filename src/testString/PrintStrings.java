@@ -1,4 +1,4 @@
-package TestString;
+package testString;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

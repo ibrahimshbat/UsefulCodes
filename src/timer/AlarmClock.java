@@ -1,4 +1,4 @@
-package Timer;
+package timer;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -9,12 +9,14 @@ import java.util.concurrent.TimeUnit;
  Run a simple task once every second, starting 3 seconds from now.
  Cancel the task after 20 seconds.
 */
-public final class AlarmClockOld {
+public final class AlarmClock {
   
   /** Run the example. */
   public static void main(String... aArgs) throws InterruptedException {
+	long zxid=0;
+
     log("Main started.");
-    AlarmClockOld alarmClock = new AlarmClockOld(3, 1, 20);
+    AlarmClock alarmClock = new AlarmClock(3, 15, 20);
     alarmClock.activateAlarmThenStop();
     /*
     To start the alarm at a specific date in the future, the initial delay
@@ -27,22 +29,38 @@ public final class AlarmClockOld {
     log("Main ended.");
   }
   
-  AlarmClockOld(long aInitialDelay, long aDelayBetweenBeeps, long aStopAfter){
+  AlarmClock(long aInitialDelay, long aDelayBetweenBeeps, long aStopAfter){
     fInitialDelay = aInitialDelay;
     fDelayBetweenRuns = aDelayBetweenBeeps;
     fShutdownAfter = aStopAfter;
-    fScheduler = Executors.newScheduledThreadPool(NUM_THREADS);    
+    fScheduler = Executors.newScheduledThreadPool(1000000);    
   }
   
   /** Sound the alarm for a few seconds, then stop. */
-  void activateAlarmThenStop(){
-    Runnable soundAlarmTask = new SoundAlarmTask();
-    ScheduledFuture<?> soundAlarmFuture = fScheduler.scheduleWithFixedDelay(
-      soundAlarmTask, fInitialDelay, fDelayBetweenRuns, TimeUnit.SECONDS
-    );
-    Runnable stopAlarm = new StopAlarmTask(soundAlarmFuture);
-    fScheduler.schedule(stopAlarm, fShutdownAfter, TimeUnit.SECONDS);
-  }
+	void activateAlarmThenStop() {
+		SoundAlarmTask soundAlarmTask;
+		for (int i = 0; i < 100; i++) {
+			soundAlarmTask = new SoundAlarmTask();
+			ScheduledFuture<?> soundAlarmFuture = fScheduler.schedule(soundAlarmTask, fDelayBetweenRuns,
+					TimeUnit.MILLISECONDS);
+			soundAlarmTask.setfSchedFuture(soundAlarmFuture);
+			soundAlarmTask.setZxid(i);
+//			try {
+//				Thread.sleep(1);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+		}
+//		SoundAlarmTask soundAlarmTask1 = new SoundAlarmTask();
+//		ScheduledFuture<?> soundAlarmFuture1 = fScheduler.schedule(soundAlarmTask1, fDelayBetweenRuns,
+//				TimeUnit.SECONDS);
+//		soundAlarmTask1.setfSchedFuture(soundAlarmFuture1);
+//		soundAlarmTask1.setZxid(4);
+
+		// Runnable stopAlarm = new StopAlarmTask(soundAlarmFuture);
+		// fScheduler.schedule(stopAlarm, fShutdownAfter, TimeUnit.SECONDS);
+	}
 
   // PRIVATE 
   private final ScheduledExecutorService fScheduler;
@@ -58,10 +76,33 @@ public final class AlarmClockOld {
   private static final int NUM_THREADS = 1;
   private static final boolean DONT_INTERRUPT_IF_RUNNING = false;
   
-  private static final class SoundAlarmTask implements Runnable {
-    @Override public void run() {
+   class SoundAlarmTask implements Runnable {
+	    private ScheduledFuture<?> fSchedFuture; 
+	    private long zxid;
+
+    public ScheduledFuture<?> getfSchedFuture() {
+			return fSchedFuture;
+		}
+		public void setfSchedFuture(ScheduledFuture<?> fSchedFuture) {
+			this.fSchedFuture = fSchedFuture;
+		}
+		
+	public long getZxid() {
+			return zxid;
+		}
+		public void setZxid(long zxid) {
+			this.zxid = zxid;
+		}
+	@Override public void run() {
       ++fCount;
-      log("beep " + fCount);
+      log("beep " + zxid);
+      //fSchedFuture.cancel(DONT_INTERRUPT_IF_RUNNING);
+      /* 
+       Note that this Task also performs cleanup, by asking the 
+       scheduler to shutdown gracefully. 
+      */
+      //fScheduler.shutdown();
+
     }
     private int fCount;
   }

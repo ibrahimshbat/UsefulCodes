@@ -17,6 +17,7 @@ public class MapToCSV {
 		lats.put((long)3, 1000.0);
 		lats.put((long)5, 160.0);
 		lats.put((long)6, 10.0);
+		lats.put((long)7, 11.0);
 //		for (int i=0;i<=lats.size();i++){
 //			outFileToWork.println(lats.);
 //		}
