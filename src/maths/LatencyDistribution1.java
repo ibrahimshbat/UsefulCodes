@@ -1,4 +1,4 @@
-package Maths;
+package maths;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
