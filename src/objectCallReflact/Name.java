@@ -1,4 +1,4 @@
-package ObjectCallReflact;
+package objectCallReflact;
 
 public class Name {
 	

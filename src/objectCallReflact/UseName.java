@@ -1,4 +1,4 @@
-package ObjectCallReflact;
+package objectCallReflact;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

@@ -1,5 +1,8 @@
 package testString;
 
+/*
+ * Class aim to test sub String
+ */
 public class TestSubString {
 
 	public static void main(String[] args) {
@@ -7,7 +10,6 @@ public class TestSubString {
 
 		ack=ack.substring(1, (ack.length()-1));;
 		System.out.println(ack);
-
-
+	
 	}
 }
