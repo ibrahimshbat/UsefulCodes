@@ -4,7 +4,9 @@ import java.util.TimerTask;
 import java.util.Calendar;
 import java.util.TimeZone;
  
- 
+ /*
+  * This class uses to test and see how timer class works
+  */
 public class MyTimer 
 {
     Timer timer;
