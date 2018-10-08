@@ -1,4 +1,4 @@
-package adaptation;
+package statistic;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,6 +9,9 @@ import java.util.TreeMap;
 
 import org.apache.commons.math3.distribution.TDistribution;
 
+/*
+ * This class provides stats tools
+ */
 public class Statistic {
 
 	//For 20 Experewmeint, For example in 10% we have 20 samples, each has 10000 latencies.
