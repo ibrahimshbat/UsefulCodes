@@ -319,6 +319,9 @@ public class Statistic {
 
 	}
 	
+	/*
+	 * This method provides table studtens distrubution
+	 */
 	public static double find_TDistribution(int degree){
 		double value = 0.0;
 		TDistribution t = new TDistribution(degree);
