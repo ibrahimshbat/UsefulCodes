@@ -1,5 +1,8 @@
 package collections;
 
+/*
+ * Class to use Map to add items to value that of type an array
+ */
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
