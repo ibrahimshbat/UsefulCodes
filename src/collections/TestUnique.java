@@ -3,6 +3,9 @@ package collections;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+ * Class to test items stored in Set collection
+ */
 public class TestUnique {
 
 	public static void main(String[] args) {
