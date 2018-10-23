@@ -6,7 +6,9 @@ import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-
+/*
+ * Class to Sort ConcurrentMap Objects
+ */
 public class TestSortSet {
 
 	public static void main(String[] args) {
@@ -25,7 +27,7 @@ public class TestSortSet {
 		committable.remove((long)2);
 		System.out.println(outstandingProposals);
 		System.out.println(committable);
-		
+
 		committable.clear();
 		System.out.println(outstandingProposals);
 		System.out.println(committable);
