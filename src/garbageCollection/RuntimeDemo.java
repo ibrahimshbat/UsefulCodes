@@ -1,6 +1,9 @@
 package garbageCollection;
     import java.util.Date;
      
+    /*
+     * Class prints Garbage Collection status
+     */
     public class RuntimeDemo
     {
     	public static void main(String args[]){
