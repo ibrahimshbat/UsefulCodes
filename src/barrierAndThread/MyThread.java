@@ -2,6 +2,9 @@ package barrierAndThread;
 
 import java.util.concurrent.BrokenBarrierException;
 
+/*
+ * Class shows how to apply barrier
+ */
 public class MyThread extends Thread{
 	private MainBarroer mbb;
 	public MyThread(String name, MainBarroer mbb) {

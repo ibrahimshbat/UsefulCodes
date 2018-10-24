@@ -3,6 +3,9 @@ package barrierAndThread;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+/*
+ * Class shows how to apply barrier
+ */
 public class MainBarroer {
 	
 	private MyThread [] _clients = new MyThread[2];
