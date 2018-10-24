@@ -1,5 +1,8 @@
 package general;
 
+/*
+ * Class to test the use of constant paramters and switch statement
+ */
 public class Test {
 
 	public static void main(String[] args) {

@@ -1,5 +1,8 @@
 package general;
 
+/*
+ * Class shows the use of constant paramters and switch statement
+ */
 public class ConstantPara {
 	private final static int THETA_N3_WR10_T0     = 1810;
 	private final static int THETA_N3_WR20_T0     = 2502;
