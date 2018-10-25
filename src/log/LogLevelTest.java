@@ -1,6 +1,8 @@
 package log;
 import org.apache.log4j.Logger;
-
+/*
+ * Class to use Log different messages
+ */
 public class LogLevelTest {
 
    private static org.apache.log4j.Logger log = Logger.getLogger(LogLevelTest.class);
