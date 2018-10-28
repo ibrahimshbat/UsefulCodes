@@ -9,10 +9,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.List;
-
 import com.google.common.base.Function;
 import com.google.common.collect.*;
 
+/*
+ * Class to find Latency Distribution
+ */
 public class LatencyDistribution {
 
 	public static void main(String[] args) throws IOException {
