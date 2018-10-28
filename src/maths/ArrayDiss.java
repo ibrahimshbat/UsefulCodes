@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+/*
+ * Class to find the frequency of an item in collection
+ */
 public class ArrayDiss {
 
 	public static void main(String[] args) {
