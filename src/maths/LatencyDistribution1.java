@@ -10,7 +10,9 @@ import java.util.Random;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.TreeMultiset;
-
+/*
+ * Class uses to group and anaylsis latancy data
+ */
 public class LatencyDistribution1 {
 	public static void main(String[] args) throws IOException {
 		// initialize the List with 500 random values between 1 and 200
