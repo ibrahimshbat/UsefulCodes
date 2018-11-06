@@ -2,6 +2,9 @@ package maths;
 
 import java.util.Random;
 
+/*
+ * Class uses random class to print test double random value
+ */
 public class TestRandom {
 
 	public static void main(String[] args) {
@@ -14,7 +17,8 @@ public class TestRandom {
 		System.out.println(randomValue);
 		randomValue=random.nextDouble();
 		System.out.println(randomValue);
-
+		randomValue=random.nextDouble();
+		System.out.println(randomValue);
 
 	}
 
