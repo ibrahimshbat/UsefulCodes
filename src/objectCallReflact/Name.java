@@ -1,5 +1,7 @@
 package objectCallReflact;
-
+/*
+ * Class Name for demonstrate person name
+ */
 public class Name {
 	
 	private String firstName = null;
