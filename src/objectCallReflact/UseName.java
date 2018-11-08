@@ -3,7 +3,9 @@ package objectCallReflact;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-
+/*
+ * Class uses Name and AckCommitHandler classes
+ */
 public class UseName {
 
 	public static void main(String[] args) {
