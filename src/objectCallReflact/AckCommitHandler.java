@@ -1,5 +1,8 @@
 package objectCallReflact;
 
+/*
+ * Class uses to commit a proposal in Zookeeper
+ */
 public class AckCommitHandler {
 	private int numberOfAck = 0;
 	private byte type;
