@@ -8,6 +8,9 @@ import java.text.DecimalFormat;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+/*
+ * Class helps to find a reasnobale P for ZabCT protocol
+ */
 public class LowerBound {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
