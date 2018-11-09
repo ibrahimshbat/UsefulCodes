@@ -23,31 +23,18 @@ public class LowerBound {
 		double delta = 0.001;
 		int N=7,WR=10;
 		double 	dlamda=26.36, P2=0.269,p=0.0,P1=0.0,p1u=0.0,pw=0.0,minVal=0.0;
-		//while ((str = in.readLine()) != null){
-			//dlamda = Double.parseDouble(str);
-			for (double i = 0.01; i <= 1; i+=0.01) {
-				i = Double.parseDouble(roundValue.format(i));
-				pw=st.findWForRangep(i,N,0);
+		for (double i = 0.01; i <= 1; i+=0.01) {
+			i = Double.parseDouble(roundValue.format(i));
+			pw=st.findWForRangep(i,N,0);
 
-				if(pw<dlamda){
-					p1u=i;
-					break;
-				}
+			if(pw<dlamda){
+				p1u=i;
+				break;
 			}
-			//minVal=Math.min(P2, p1u);
-			P1=findp(0,6,0.96,0.312, st);
-			System.out.println("dsdsd"+P1);
-//			if(P1<=P2){
-//				System.out.println(WR+"/P1<=P2--(p)="+P1);
-//				System.out.println("(info)="+"("+P2+","+P1+","+p1u+",min="+minVal+")");
-//			}
-//			else{
-//				System.out.println(WR+"/Switch--(info)=("+P2+","+P1+","+p1u+",min="+minVal+")");
-//			}
-//			//WR+=10;
-		//}
-		//System.out.println(P2+","+P1+","+p1u+",min="+minVal);
-	}
+		}
+		//minVal=Math.min(P2, p1u);
+		P1=findp(0,6,0.96,0.312, st);
+		System.out.println("dsdsd"+P1);
 
 	public static double findp(int c, int n, double c1, double min, ProtocolStats1 st){
 		final double ABS = 0.001;
