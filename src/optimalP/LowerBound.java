@@ -35,7 +35,7 @@ public class LowerBound {
 		//minVal=Math.min(P2, p1u);
 		P1=findp(0,6,0.96,0.312, st);
 		System.out.println("dsdsd"+P1);
-
+	}
 	public static double findp(int c, int n, double c1, double min, ProtocolStats1 st){
 		final double ABS = 0.001;
 		DecimalFormat roundValue = new DecimalFormat("#.000");
