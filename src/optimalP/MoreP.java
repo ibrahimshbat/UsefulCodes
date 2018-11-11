@@ -1,5 +1,8 @@
 package optimalP;
 
+/*
+ * Class create a set of P points
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
