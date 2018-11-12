@@ -11,6 +11,9 @@ import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+/*
+ * Class uses to help ploting the W VS P  (V1)
+ */
 public class PVSW {
 
 	public static void main(String[] args) throws IOException {

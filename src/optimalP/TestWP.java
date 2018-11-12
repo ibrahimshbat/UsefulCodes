@@ -14,7 +14,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 /*
- * Class uses to help ploting the W VS P
+ * Class uses to help ploting the W VS P (V2)
  */
 public class TestWP {
 
