@@ -13,6 +13,9 @@ import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+/*
+ * Class uses to help ploting the W VS P
+ */
 public class TestWP {
 
 	
@@ -31,7 +34,6 @@ public class TestWP {
 		ArrayList<Double> P1us = new ArrayList<Double>();
 		ArrayList<Double> P1ls = new ArrayList<Double>();
 		double P1u=0.0, P1l=0.0, WP1u=0.0, WP1l=0.0;
-		//System.out.println(ps.findWForRangep(0.018,3,0));
 		while ((str = in.readLine()) != null){
 			//System.out.println(str);
 			P1u = Double.parseDouble(str.split(",")[0]);
@@ -47,9 +49,7 @@ public class TestWP {
 		System.out.println(P1ls);
 		for(int i=0;i<P1us.size();i++)
 			outFile.println(P1us.get(i)+","+P1ls.get(i));
-		//for(double p12:P1ls)
-			//outFile.println(p12);
-		//
+
 		outFile.close();
 			
 
