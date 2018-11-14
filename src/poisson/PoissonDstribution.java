@@ -2,7 +2,10 @@ package poisson;
 
 import java.util.Random;
 
-public class Test1 {
+/*
+ * Class uses Poisson distribution
+ */
+public class PoissonDstribution {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
