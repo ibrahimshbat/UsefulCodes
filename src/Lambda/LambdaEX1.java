@@ -4,6 +4,10 @@ package Lambda;
 
 import java.util.Comparator;
 
+import MyComparator;
+import MyFactory;
+import MyFuction;
+
 
 public class LambdaEX1 {
 
@@ -39,6 +43,16 @@ public class LambdaEX1 {
 		MyComparator myCom = (a1,a2) ->  a1>a2;
 		boolean result = myCom.compare(6, 5);
 		System.out.println(result);
+		
+		MyFactory myFactory = (chars) -> {
+		    return new String(chars);
+		};
+		
+		String myString = "Test";
+
+//		MyFactory myFactory = (chars) -> {
+//		      "" + myString + ":" + new String(chars);
+//		};
 
 				
 
