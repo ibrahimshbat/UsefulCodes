@@ -2,11 +2,8 @@ package Lambda;
 
 
 
-import java.util.Comparator;
 
-import MyComparator;
-import MyFactory;
-import MyFuction;
+import java.util.Comparator;
 
 
 public class LambdaEX1 {
@@ -50,11 +47,11 @@ public class LambdaEX1 {
 		
 		String myString = "Test";
 
-//		MyFactory myFactory = (chars) -> {
-//		      "" + myString + ":" + new String(chars);
-//		};
+		MyFactory myFactory1 = chars -> 
+		      (myString + ":" + new String(chars));
 
-				
+		String message = myFactory.create(new char[] { 'K', 'E', 'V', 'I', 'N' });
+		System.out.println(message);
 
 	}
 
