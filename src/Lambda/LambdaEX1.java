@@ -1,9 +1,9 @@
 package Lambda;
 
 
+
 import java.util.Comparator;
 
-import MyFuction;
 
 public class LambdaEX1 {
 
@@ -33,6 +33,13 @@ public class LambdaEX1 {
 		MyFuction myFunction2 =myFunction;
 		String apply = myFunction2.apply("Hello Muhammad", "EL-Sanosi");
 		System.out.println(apply);
+		
+		
+		//MyComparator myComparator = (a1,a2) -> return a1 > a2;
+		MyComparator myCom = (a1,a2) ->  a1>a2;
+		boolean result = myCom.compare(6, 5);
+		System.out.println(result);
+
 				
 
 	}
