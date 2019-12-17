@@ -21,14 +21,10 @@ public class WriteToFile {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		String email = null;
-		ArrayList<User> sortedUsers;
-		for (Map.Entry<String, ArrayList<User>> entry : users.entrySet()) {
-			email = entry.getKey();
 			
-			referralsData.println(email);
+			referralsData.println("Write somethings to the file");
 
-		}
+	
 		referralsData.close();	
 
 	}
